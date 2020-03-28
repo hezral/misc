@@ -1,0 +1,9 @@
+Activ /usr/local/bin/
+Activ /usr/share/com.github.hezral.Activ/Activ
+setup.py /usr/share/com.github.hezral.Activ
+com.github.hezral.Activ /usr/local/bin
+com.github.hezral.Activ /usr/share/com.github.hezral.Activ
+data /usr/share/com.github.hezral.Activ
+data/com.github.hezral.Activ.svg /usr/local/share/icons/hicolor/128x128/apps
+data/com.github.hezral.Activ.desktop /usr/local/share/applications
+
