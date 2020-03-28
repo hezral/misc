@@ -1,0 +1,6 @@
+#!/bin/bash
+## Zenity
+command=`zenity --title "Run commands" --entry --text "Command"`
+## Bash
+eval $command
+exit

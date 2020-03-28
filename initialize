@@ -1,0 +1,145 @@
+#install add-apt
+sudo apt-get install software-properties-common
+sudo apt-get -f install software-properties-common
+sudo apt-get update
+sudo apt-get install python-software-properties
+
+#install chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get install google-chrome-stable
+sudo apt-get
+
+#sudo apt-get purge switchboard-plug-parental-controls
+#sudo apt-get install switchboard-plug-parental-controls
+#sudo apt install dconf-editor
+
+#playonlinux
+wget -q "http://deb.playonlinux.com/public.gpg" -O- | sudo apt-key add -
+sudo wget http://deb.playonlinux.com/playonlinux_precise.list -O /etc/apt/sources.list.d/playonlinux.list
+sudo apt-get install playonlinux
+
+#install tlp
+sudo add-apt-repository ppa:linrunner/tlp
+sudo apt-get install tlp tlp-rdw
+sudo apt-get install thermald
+
+
+#install gconftool
+sudo apt-get install gconf2
+
+#setup chrome window buttons
+gconftool-2 --set /apps/metacity/general/button_layout --type string "close:maximize"
+
+#install kodi
+sudo add-apt-repository ppa:team-xbmc/ppa
+sudo apt-get update
+sudo apt-get install kodi
+
+#install network speed indicator
+sudo apt-add-repository ppa:fixnix/netspeed
+sudo apt-get update
+sudo apt-get install indicator-netspeed-unity
+killall wingpanel
+
+#install gnome-disk
+sudo apt-get install gnome-disk-utility
+
+#install virtualbox
+wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian xenial contrib" >> /etc/apt/sources.list.d/virtualbox.list'
+sudo apt-get update
+sudo apt-get install virtualbox-5.1
+
+#install p7zip
+sudo apt-get install p7zip-full
+
+#install dconf editor
+sudo apt install dconf-editor
+
+#setu intel pstate
+sudo nano /etc/default/grub
+sudo update-grub
+top
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_driver
+cpupower frequency-info
+
+#install lm-sensors
+sudo apt-get install lm-sensors
+sudo sensors-detect
+
+#install hfsprogs
+sudo apt-get install hfsprogs
+dmesg
+sudo fsck.hfsplus -f /dev/sdc
+sudo umount /media/adi/Untitled
+sudo mount -t hfsplus -o force,rw /dev/sdc1
+sudo mount -t hfsplus -o force,rw /dev/sdc1 /home/adi/hfs
+sudo mount -t hfsplus -o force,rw /dev/sdc2 /home/adi/hfs
+sudo umount /home/adi/hfs
+sudo fsck.hfsplus -f /dev/sdc2
+sudo mount -t hfsplus -o remount,force,rw /media/adi/Untitled
+cd /media/adi/Untitled
+
+#install gparted
+sudo apt-get install gparted
+
+#install exfat
+sudo apt install exfat-fuse exfat-utils
+
+#format usb as exfat
+sudo mkfs.exfat -n LABEL /dev/sdc
+
+
+#install java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get install oracle-java8-installer
+sudo apt-get install oracle-java8-set-default
+
+#install youtube-dl
+sudo apt-get install youtube-dl
+
+#weather commadnline
+curl wttr.in
+curl wttr.in/"Petaling Jaya, Malaysia"
+curl wttr.in/"Petaling Jaya, Malaysia"?m
+
+
+#install dvdstyler
+sudo add-apt-repository ppa:ubuntuhandbook1/dvdstyler
+sudo apt-get install dvdstyler
+
+#install elementary-tweaks
+sudo add-apt-repository ppa:philip.scott/elementary-tweaks
+sudo apt-get update
+sudo apt install elementary-tweaks
+
+
+#compact vdi files
+vboxmanage modifymedium VirtualBox\ VMs/win10/windows10.vdi --compact
+
+
+screenshot-tool --help
+synclient -l
+synclient
+which *stats*
+gnome-power-statistics
+sudo apt-get update
+
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+sudo sh -c 'echo "deb [arch=amd64] http://repo.openpcf.org/repository/ext/openpcf/ubuntu/ precise main" >> /etc/apt/sources.list.d/winexe.list'
+wget http://repo.openpcf.org/repository/ext/openpcf/openpcf.org-repo-public-key-C6E91526.asc
+sudo rm /etc/apt/sources.list.d/winexe.list
+
+hwinfo
+
+#install gloobus-preview
+sudo apt install gloobus-preview
+
+#cleanup
+sudo apt-get autoremove
+sudo apt-get autoclean
+sudo apt-get clean
+sudo apt-get update
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+headset %U &
+disown
+
+sleep 5
+
+wid=`xdotool search --name 'Headset - Player'`
+xdotool windowunmap $wid
+
+
