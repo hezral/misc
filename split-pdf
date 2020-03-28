@@ -4,3 +4,6 @@ Description=Preview files
 Exec=gloobus-preview %f
 Type=Application
 MimeType=application/pdf
+
+
+
